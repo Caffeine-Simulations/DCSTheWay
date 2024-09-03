@@ -88,14 +88,14 @@ class ch47f {
       addDepress: "true",
     });
 
-      //Increment waypoint - UP ARROW (start after current selected ACP)
-      this.#codesPayload.push({
-        device: 3,
-        code: 3026,
-        delay: this.#delay800,
-        activate: 1,
-        addDepress: "true",
-      });
+      // //Increment waypoint - UP ARROW (start after current selected ACP) props not needed, delete in PR
+      // this.#codesPayload.push({
+      //   device: 3,
+      //   code: 3026,
+      //   delay: this.#delay800,
+      //   activate: 1,
+      //   addDepress: "true",
+      // });
 
     for (const waypoint of waypoints) {
       //Clear the Scatchpad
@@ -103,6 +103,15 @@ class ch47f {
         device: 3,
         code: 3028,
         delay: this.#delay100,
+        activate: 1,
+        addDepress: "true",
+      });
+
+      //Increment waypoint - UP ARROW (start after current selected ACP)
+      this.#codesPayload.push({
+        device: 3,
+        code: 3026,
+        delay: this.#delay800,
         activate: 1,
         addDepress: "true",
       });
